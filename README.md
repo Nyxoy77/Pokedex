@@ -49,7 +49,10 @@ To run this app locally, follow these steps:
 
 ## Screenshots
 
-(photos\WhatsApp Image 2024-09-14 at 20.26.02_05e63c4c.jpg)
+Here’s a screenshot of the Pokedex app:
+
+![Pokedex Home Screen](photos/WhatsApp%20Image%202024-09-14%20at%2020.26.02_05e63c4c.jpg)
+
 
 ## Future Improvements
 
