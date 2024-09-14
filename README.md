@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # pokedex
 
 A new Flutter project.
@@ -14,3 +15,7 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+=======
+# Pokedex
+An Pokedex using PokeApi to get information regarding the pokemons 
+>>>>>>> 58da618c848f4bc493c1d127c15313b55323fe7c
