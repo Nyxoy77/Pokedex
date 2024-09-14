@@ -49,7 +49,7 @@ To run this app locally, follow these steps:
 
 ## Screenshots
 
-(Add screenshots of your app here)
+(photos\WhatsApp Image 2024-09-14 at 20.26.02_05e63c4c.jpg)
 
 ## Future Improvements
 
