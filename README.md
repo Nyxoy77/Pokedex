@@ -66,4 +66,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-This README provides a good overview of your app and its core functionality! You can tweak it further to match your app's specific details.
