@@ -1,162 +1,69 @@
-# E-Commerce REST API
 
-**E-Commerce REST API** provides a backend system for managing users, products, and orders using **Go (Golang)**.
 
 ---
 
-## API Documentation
+# Pokedex App
 
-👉 [API Documentation](https://nyxoy77.github.io/REST_API_GO/)
-
-Includes:
-- API endpoints
-- Request/response examples
-- Authentication requirements
-
----
+The **Pokedex App** is a Flutter-based application that displays a list of Pokémon, along with detailed information sourced from the [PokeAPI](https://pokeapi.co/). The app supports dynamic loading of Pokémon data using pagination and allows users to mark their favorite Pokémon, which are prominently displayed at the top.
 
 ## Features
 
-- Secure user authentication with **JWT**
-- **CRUD operations** for products and orders
-- Admin privileges for management
-- RESTful design principles
+- **List of Pokémon**: Displays a complete list of Pokémon, fetched dynamically from the PokeAPI.
+- **Pagination**: The app loads more Pokémon data as the user scrolls to the end of the list.
+- **Favorite Pokémon**: Users can favorite any Pokémon, and their favorites will be shown at the top in a grid view.
+- **Persistent State**: The app uses the **Shared Preferences** package to store the user's favorite Pokémon, ensuring that the favorites remain saved even when the app is closed and reopened.
 
----
+## Technologies Used
+
+- **Flutter**: For building the UI and overall app functionality.
+- **PokeAPI**: For fetching Pokémon data (names, stats, types, etc.).
+- **Shared Preferences**: For persisting the state of the favorite Pokémon across app sessions.
+- **GridView**: For displaying the user's favorite Pokémon at the top.
+- **ListView with Pagination**: To dynamically load and display more Pokémon data as the user scrolls.
+
+## How It Works
+
+1. **Dynamic Data Loading**: The app loads Pokémon data from PokeAPI in batches, ensuring a smooth and efficient user experience.
+2. **Favoriting Pokémon**: Users can tap a Pokémon to mark it as a favorite. Favorited Pokémon are then displayed at the top of the screen.
+3. **Persistent Favorites**: The app uses **Shared Preferences** to maintain the state of favorite Pokémon, meaning users' favorites will be restored whenever they open the app again.
 
 ## Installation
 
-### Prerequisites
-
-- **Go (1.19+)**
-- **Database** (PostgreSQL/MongoDB)
-- **Git**
-
-### Steps
+To run this app locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Nyxoy77/REST_API_GO.git
-   cd REST_API_GO
-   
-### Steps
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Nyxoy77/REST_API_GO.git
-   cd REST_API_GO
+   git clone https://github.com/Nyxoy77/Pokedex.git
+   cd Pokedex
    ```
 
 2. Install dependencies:
    ```bash
-   go mod tidy
+   flutter pub get
    ```
 
-3. Configure `.env`:
-   ```env
-   DB_HOST=localhost
-   DB_PORT=5432
-   DB_USER=username
-   DB_PASSWORD=password
-   DB_NAME=ecommerce
-   JWT_SECRET=your_jwt_secret
-   ```
-
-4. Start the server:
+3. Run the app on a simulator or connected device:
    ```bash
-   go run main.go
+   flutter run
    ```
 
-5. API available at `http://localhost:8080`.
+## Screenshots
 
----
+Here’s a screenshot of the Pokedex app:
 
-## API Endpoints
+![Pokedex Home Screen](photos/WhatsApp%20Image%202024-09-14%20at%2020.26.02_05e63c4c.jpg)
 
-### Public Routes
 
-- `POST /login` - User login
-- `POST /register` - User registration
-- `POST /forgot` - Request password reset
-- `PUT /update_pass/{token}` - Update password using token
-- `POST /refresh` - Refresh JWT token
+## Future Improvements
 
-### Protected Routes (Authenticated)
-
-- `GET /products` - Fetch all products
-
-### Admin Routes
-
-- `GET /get_all_users` - Fetch all users
-- `GET /get_admins` - Fetch all admins
-- `GET /get_customers` - Fetch all customers
-- `POST /add_product` - Add a new product
-- `DELETE /remove_product` - Remove a product
-- `PUT /update_price` - Update product price
-
-### User Routes
-
-- `POST /add_to_cart` - Add item to cart
-- `DELETE /remove_item` - Remove item from cart
-- `POST /order` - Place an order
-
----
-
-## Tech Stack
-
-- **Language**: Go (Golang)
-- **Database**: PostgreSQL/MongoDB/Supabase
-- **Authentication**: JWT
-- **Framework**: `gorilla/mux`
-
----
-
-## Testing
-
-Run tests:
-```bash
-go test ./...
-```
-
----
-
-## Deployment
-
-Use Docker:
-```bash
-docker build -t ecommerce-api .
-docker run -p 8080:8080 ecommerce-api
-```
-
----
-
-## Contributing
-
-1. Fork the repository.
-2. Create a feature branch:
-   ```bash
-   git checkout -b feature/your-feature
-   ```
-3. Commit changes:
-   ```bash
-   git commit -m "Your message"
-   ```
-4. Push to branch:
-   ```bash
-   git push origin feature/your-feature
-   ```
-5. Open a pull request.
-
----
+- Adding search functionality to allow users to search for specific Pokémon by name.
+- Implementing sorting options based on various Pokémon attributes (e.g., type, attack, defense).
+- Offline support for viewing previously loaded Pokémon data.
 
 ## License
 
-Licensed under the [MIT License](LICENSE).
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
-## Contact
-
-- **Author**: [Nyxoy77](https://github.com/Nyxoy77)
-- **API Documentation**: [Link](https://nyxoy77.github.io/REST_API_GO/)
-```
+This README provides a good overview of your app and its core functionality! You can tweak it further to match your app's specific details.
